@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+gem 'launchy'
+gem 'sinatra'
+gem 'capybara'
+gem 'rspec'
+gem 'create_awesome_readme'
