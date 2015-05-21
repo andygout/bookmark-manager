@@ -23,6 +23,11 @@ post '/users/password_reset' do
   user.password_token = (1..50).map{('A'..'Z').to_a.sample}.join
   user.password_token_timestamp = Time.now
   user.save
+  user.email_token
   flash[:notice] = 'Token submitted'
   redirect to('/')
+end
+
+post '/users/password_reset/:token' do
+
 end

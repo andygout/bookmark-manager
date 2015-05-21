@@ -27,22 +27,6 @@ feature 'User signs in' do
 
 end
 
-feature 'User forgets password' do
-
-  before(:each) do
-    User.create(email: 'test@test.com', password: 'test', password_confirmation: 'test')
-  end
-
-  scenario 'User requests replacement password' do
-    visit '/sessions/new'
-    expect(page).to have_content('Forgot password?')
-    fill_in :forgot, with: 'test@test.com'
-    click_button 'Request new password'
-    expect(page).to have_content('Token submitted')
-  end
-
-end
-
 feature 'User signs out' do
 
   before(:each) do
@@ -78,6 +62,22 @@ feature 'User signs up' do
     expect { sign_up }.to change(User, :count).by(1)
     expect { sign_up }.to change(User, :count).by(0)
     expect(page).to have_content('Email is already taken')
+  end
+
+end
+
+feature 'User forgets password' do
+
+  before(:each) do
+    User.create(email: 'test@test.com', password: 'test', password_confirmation: 'test')
+  end
+
+  scenario 'User requests replacement password' do
+    visit '/sessions/new'
+    expect(page).to have_content('Forgot password?')
+    fill_in :forgot, with: 'test@test.com'
+    click_button 'Request new password'
+    expect(page).to have_content('Token submitted')
   end
 
 end
