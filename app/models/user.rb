@@ -36,7 +36,7 @@ class User
     smtp_login = ENV['MAILGUN_SMTP_LOGIN']
     smtp_login_seg = ENV['MAILGUN_SMTP_LOGIN_SEG']
     email_address = ENV['AG_EMAIL_ADDRESS']
-    token_url = "<a href='http://localhost:9292/users/password_reset/#{self.password_token}'>here</a>"
+    token_url = "<a href='http://localhost:9292/users/reset_password/#{self.password_token}'>here</a>"
     token_deadline = (self.password_token_timestamp + (60 * 60)).strftime("%H:%M on %d %b %Y")
 
     RestClient.post "https://api:#{api_key}@api.mailgun.net/v3/#{smtp_login_seg}.mailgun.org/messages",
