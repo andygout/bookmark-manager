@@ -1,41 +1,25 @@
-Title
-=======================
+Bookmark Manager
+=================
 
-## Synopsis
+Challenge:
+-------
 
-TODO: Enter a description of your project here.
+Create a Bookmark Manager.
 
-![NAME_OF_IMAGE](http://ENTER_URL)
+Technologies Used:
+-------
 
-## Technologies Used
+- Relational databases using PostgreSQL (open source database) and DataMapper (Object Relational Mapper (ORM) written in Ruby)
+- Security considerations
+- Acceptance testing with Capybara
 
-- LANGUAGE_ONE
-- LANGUAGE_TWO
-- FRAMEWORK
-- TESTING SUITES
+Next Steps:
+-------
 
-## Job List
+- Testing for password recovery.
+- app/controllers/users.rb: research if any advantages to using DataMapper update method instead of updating and saving individual properties of a method with method call.
 
-- [ ]
-- [ ]
-- [ ]
-- [ ]
+Links:
+-------
 
-## Favourite Code Snippet
-
-~~~
- TODO: paste code here
-~~~
-
-## Collaborators
-
-- JENNIFER ARAD-MARKS (http://www.github.com/curlygirly)
-
-## Still to complete/refactor
-
-- [ ]
-- [ ]
-
-## Takeaway
-
-TODO: Enter a personal reflection and/or things you learnt
+[Github - Makers Academy: Bookmark Manager](https://github.com/makersacademy/course/blob/master/bookmark_manager/bookmark_manager.md)

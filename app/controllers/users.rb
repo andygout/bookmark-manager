@@ -58,3 +58,20 @@ post '/users/set_new_password' do
     erb :'users/set_new_password'
   end
 end
+
+# --uses update method instead of update and save individual properties of a method with method call as above--
+# post '/users/set_new_password' do
+#   @password_token = params[:password_token]
+#   @user = User.first(password_token: @password_token)
+#   @user.update( password: params[:password],
+#                 password_confirmation: params[:password_confirmation],
+#                 password_token: nil,
+#                 password_token_timestamp: nil)
+#   if @user.save
+#     flash[:notice] = 'Password has been reset'
+#     redirect to('/')
+#   else
+#     flash.now[:errors] = @user.errors.full_messages
+#     erb :'users/set_new_password'
+#   end
+# end
