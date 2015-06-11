@@ -63,11 +63,10 @@ end
 # post '/users/set_new_password' do
 #   @password_token = params[:password_token]
 #   @user = User.first(password_token: @password_token)
-#   @user.update( password: params[:password],
+#   if @user.update(password: params[:password],
 #                 password_confirmation: params[:password_confirmation],
 #                 password_token: nil,
 #                 password_token_timestamp: nil)
-#   if @user.save
 #     flash[:notice] = 'Password has been reset'
 #     redirect to('/')
 #   else
